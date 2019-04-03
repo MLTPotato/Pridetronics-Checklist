@@ -1,0 +1,207 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #808080; font-style: italic;}
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.java</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">package </span>com.example.pridetronicschecklist;
+
+<span class="s0">import </span>android.support.v7.app.AppCompatActivity;
+<span class="s0">import </span>android.os.Bundle;
+<span class="s0">import </span>android.view.View;
+<span class="s0">import </span>android.widget.Button;
+<span class="s0">import </span>android.widget.CheckBox;
+<span class="s0">import </span>android.widget.ImageView;
+<span class="s0">import </span>android.widget.TextView;
+
+<span class="s0">public class </span>MainActivity <span class="s0">extends </span>AppCompatActivity {
+
+    @Override
+    <span class="s0">protected void </span>onCreate(Bundle savedInstanceState) {
+        <span class="s0">super</span>.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        <span class="s2">//Creates buttons</span>
+        <span class="s0">final </span>Button finish = findViewById(R.id.FinishBTN);
+
+        <span class="s2">//Check Boxes for GamePad</span>
+        <span class="s0">final </span>CheckBox leftThumb = findViewById(R.id.LeftThumbBox);
+        <span class="s0">final </span>CheckBox rightThumb = findViewById(R.id.RightThumbBox);
+        <span class="s0">final </span>CheckBox thumbsLR = findViewById(R.id.ThumbsLRBox);
+        <span class="s0">final </span>CheckBox leftTrigger = findViewById(R.id.LeftTriggerBox);
+        <span class="s0">final </span>CheckBox rightTrigger = findViewById(R.id.RightTriggerBox);
+        <span class="s0">final </span>CheckBox buttonA = findViewById(R.id.ButtonABox);
+        <span class="s0">final </span>CheckBox buttonB = findViewById(R.id.ButtonBBox);
+        <span class="s0">final </span>CheckBox buttonX = findViewById(R.id.ButtonXBox);
+        <span class="s0">final </span>CheckBox buttonY = findViewById(R.id.ButtonYBox);
+        <span class="s0">final </span>CheckBox leftBumper = findViewById(R.id.LeftBumpBox);
+        <span class="s0">final </span>CheckBox rightBumper = findViewById(R.id.RightBumpBox);
+        <span class="s0">final </span>CheckBox backStartButton = findViewById(R.id.BackStartButtonBox);
+        <span class="s0">final </span>CheckBox thumbsPress = findViewById(R.id.ThumbsPressBox);
+
+        <span class="s2">//Check Boxes for Joystick</span>
+        <span class="s0">final </span>CheckBox joystickUDLR = findViewById(R.id.JoystickUDLRBox);
+        <span class="s0">final </span>CheckBox throttle = findViewById(R.id.ThrottleBox);
+        <span class="s0">final </span>CheckBox trigger = findViewById(R.id.TriggerBox);
+        <span class="s0">final </span>CheckBox button2 = findViewById(R.id.Button2Box);
+        <span class="s0">final </span>CheckBox button3 = findViewById(R.id.Button3Box);
+        <span class="s0">final </span>CheckBox button4 = findViewById(R.id.Button4Box);
+        <span class="s0">final </span>CheckBox button5 = findViewById(R.id.Button5Box);
+        <span class="s0">final </span>CheckBox button6 = findViewById(R.id.Button6Box);
+        <span class="s0">final </span>CheckBox button7 = findViewById(R.id.Button7Box);
+        <span class="s0">final </span>CheckBox button8 = findViewById(R.id.Button8Box);
+        <span class="s0">final </span>CheckBox button9 = findViewById(R.id.Button9Box);
+        <span class="s0">final </span>CheckBox button10 = findViewById(R.id.Button10Box);
+        <span class="s0">final </span>CheckBox button11 = findViewById(R.id.Button11Box);
+        <span class="s0">final </span>CheckBox button12 = findViewById(R.id.Button12Box);
+
+        <span class="s2">//Check Boxes for Auto Behaviors</span>
+        <span class="s0">final </span>CheckBox auto1 = findViewById(R.id.Auto1Box);
+        <span class="s0">final </span>CheckBox auto2 = findViewById(R.id.Auto2Box);
+        <span class="s0">final </span>CheckBox auto3 = findViewById(R.id.Auto3Box);
+
+        <span class="s2">//Check Boxes for Systems Check</span>
+        <span class="s0">final </span>CheckBox cameraShuff = findViewById(R.id.CamboardBox);
+        <span class="s0">final </span>CheckBox canLeft = findViewById(R.id.CAN_DriveLeftBox);
+        <span class="s0">final </span>CheckBox canRight = findViewById(R.id.CAN_DriveRightBox);
+        <span class="s0">final </span>CheckBox canLift = findViewById(R.id.CAN_LiftBox);
+        <span class="s0">final </span>CheckBox wristUP = findViewById(R.id.WristUPBox);
+        <span class="s0">final </span>CheckBox wristDown = findViewById(R.id.WristDOWNBox);
+        <span class="s0">final </span>CheckBox wristUpLim = findViewById(R.id.WristUpperLimBox);
+        <span class="s0">final </span>CheckBox wristDownLim = findViewById(R.id.WristLowerLimBox);
+        <span class="s0">final </span>CheckBox liftLowerLim = findViewById(R.id.LiftLowerLimBox);
+
+        <span class="s2">//When the finish button is clicked</span>
+        finish.setOnClickListener(<span class="s0">new </span>View.OnClickListener() {
+            @Override
+            <span class="s0">public void </span>onClick(View v) {
+
+
+
+                <span class="s2">//Creates all of the finish screen background boxes</span>
+                <span class="s0">final </span>ImageView finishBackgroundBox = findViewById(R.id.finishBackgroundBox);
+                <span class="s0">final </span>ImageView finishForgroundBox = findViewById(R.id.finishForgroundBox);
+
+                <span class="s2">//Creates all of the Gamepad finish screen objects</span>
+                <span class="s0">final </span>ImageView gamePadBacker = findViewById(R.id.gamePadStatusBacker);
+                <span class="s0">final </span>TextView gamePadMessage = findViewById(R.id.gamePadMessage);
+                <span class="s0">final </span>TextView gamePadStatus = findViewById(R.id.gamePadStatus);
+
+                <span class="s2">//Creates all of the Joystick finish screen objects</span>
+                <span class="s0">final </span>ImageView joystickBacker = findViewById(R.id.joystickStatusBacker);
+                <span class="s0">final </span>TextView joystickMessage = findViewById(R.id.joystickMessage);
+                <span class="s0">final </span>TextView joystickStatus = findViewById(R.id.joystickStatus);
+
+                <span class="s2">//Creates all of the Auto Behavior finish screen objects</span>
+                <span class="s0">final </span>ImageView autoBehaviorBacker = findViewById(R.id.AutoBehaviorsStatusBacker);
+                <span class="s0">final </span>TextView autoBehaviorMessage = findViewById(R.id.AutoBehaviorsMessage);
+                <span class="s0">final </span>TextView autoBehaviorStatus = findViewById(R.id.AutoBehaviorStatus);
+
+                <span class="s2">//Creates all of the Systems Check finish screen objects</span>
+                <span class="s0">final </span>ImageView systemsCheckBacker = findViewById(R.id.SystemsCheckStatusBacker);
+                <span class="s0">final </span>TextView systemsCheckMessage = findViewById(R.id.SystemsCheckMessage);
+                <span class="s0">final </span>TextView systemsCheckStatus = findViewById(R.id.SystemsCheckStatus);
+
+                <span class="s2">//Creates the finish screen done button</span>
+                <span class="s0">final </span>Button doneBTN = findViewById(R.id.doneBTN);
+
+                <span class="s2">//Sets all the finish screen objects to be visible</span>
+                finishBackgroundBox.setVisibility(View.VISIBLE);
+                finishForgroundBox.setVisibility(View.VISIBLE);
+                gamePadMessage.setVisibility(View.VISIBLE);
+                gamePadBacker.setVisibility(View.VISIBLE);
+                joystickMessage.setVisibility(View.VISIBLE);
+                joystickBacker.setVisibility(View.VISIBLE);
+                autoBehaviorMessage.setVisibility(View.VISIBLE);
+                autoBehaviorBacker.setVisibility(View.VISIBLE);
+                systemsCheckMessage.setVisibility(View.VISIBLE);
+                systemsCheckBacker.setVisibility(View.VISIBLE);
+                doneBTN.setVisibility(View.VISIBLE);
+
+                <span class="s2">// Checks which systems have been completed</span>
+                <span class="s0">if</span>(rightThumb.isChecked()&amp;&amp; leftThumb.isChecked() &amp;&amp; thumbsLR.isChecked() &amp;&amp; leftTrigger.isChecked()&amp;&amp; rightTrigger.isChecked()&amp;&amp; buttonA.isChecked()&amp;&amp; buttonB.isChecked()&amp;&amp; buttonX.isChecked() &amp;&amp; buttonY.isChecked()&amp;&amp; leftBumper.isChecked()&amp;&amp; rightBumper.isChecked() &amp;&amp; backStartButton.isChecked() &amp;&amp; thumbsPress.isChecked())
+                {
+                    gamePadStatus.setText(R.string.nominal);
+                    gamePadStatus.setTextColor(getResources().getColor(R.color.colorGreen));
+                    gamePadStatus.setVisibility(View.VISIBLE);
+                }<span class="s0">else</span>
+                {
+                    gamePadStatus.setText(R.string.error);
+                    gamePadStatus.setTextColor(getResources().getColor(R.color.colorErrorRed));
+                    gamePadStatus.setVisibility(View.VISIBLE);
+                }
+                <span class="s0">if</span>(joystickUDLR.isChecked() &amp;&amp; throttle.isChecked() &amp;&amp; trigger.isChecked()&amp;&amp; button2.isChecked()&amp;&amp; button3.isChecked()&amp;&amp; button4.isChecked()&amp;&amp; button5.isChecked()&amp;&amp; button6.isChecked()&amp;&amp; button7.isChecked()&amp;&amp; button8.isChecked()&amp;&amp; button9.isChecked()&amp;&amp; button10.isChecked()&amp;&amp; button11.isChecked()&amp;&amp; button12.isChecked())
+                {
+                    joystickStatus.setText(R.string.nominal);
+                    joystickStatus.setTextColor(getResources().getColor(R.color.colorGreen));
+                    joystickStatus.setVisibility(View.VISIBLE);
+                }<span class="s0">else</span>
+                {
+                    joystickStatus.setText(R.string.error);
+                    joystickStatus.setTextColor(getResources().getColor(R.color.colorErrorRed));
+                    joystickStatus.setVisibility(View.VISIBLE);
+                }
+                <span class="s0">if</span>(auto1.isChecked() &amp;&amp; auto2.isChecked() &amp;&amp; auto3.isChecked())
+                {
+                    autoBehaviorStatus.setText(R.string.nominal);
+                    autoBehaviorStatus.setTextColor(getResources().getColor(R.color.colorGreen));
+                    autoBehaviorStatus.setVisibility(View.VISIBLE);
+                }<span class="s0">else</span>
+                {
+                    autoBehaviorStatus.setText(R.string.error);
+                    autoBehaviorStatus.setTextColor(getResources().getColor(R.color.colorErrorRed));
+                    autoBehaviorStatus.setVisibility(View.VISIBLE);
+                }
+                <span class="s0">if</span>(cameraShuff.isChecked() &amp;&amp; canLeft.isChecked() &amp;&amp; canRight.isChecked() &amp;&amp; canLift.isChecked() &amp;&amp; wristUP.isChecked() &amp;&amp; wristDown.isChecked() &amp;&amp; wristUpLim.isChecked() &amp;&amp; wristDownLim.isChecked() &amp;&amp; liftLowerLim.isChecked())
+                {
+                    systemsCheckStatus.setText(R.string.nominal);
+                    systemsCheckStatus.setTextColor(getResources().getColor(R.color.colorGreen));
+                    systemsCheckStatus.setVisibility(View.VISIBLE);
+                }<span class="s0">else</span>
+                {
+                    systemsCheckStatus.setText(R.string.error);
+                    systemsCheckStatus.setTextColor(getResources().getColor(R.color.colorErrorRed));
+                    systemsCheckStatus.setVisibility(View.VISIBLE);
+                }
+
+                <span class="s2">//When the done button is clicked it hides the finish screen</span>
+                doneBTN.setOnClickListener(<span class="s0">new </span>View.OnClickListener() {
+                    @Override
+                    <span class="s0">public void </span>onClick(View v) {
+
+                        finishBackgroundBox.setVisibility(View.GONE);
+                        finishForgroundBox.setVisibility(View.GONE);
+                        gamePadMessage.setVisibility(View.GONE);
+                        gamePadBacker.setVisibility(View.GONE);
+                        joystickMessage.setVisibility(View.GONE);
+                        joystickBacker.setVisibility(View.GONE);
+                        doneBTN.setVisibility(View.GONE);
+                        joystickStatus.setVisibility(View.GONE);
+                        gamePadStatus.setVisibility(View.GONE);
+                        autoBehaviorMessage.setVisibility(View.GONE);
+                        autoBehaviorBacker.setVisibility(View.GONE);
+                        autoBehaviorStatus.setVisibility(View.GONE);
+                        systemsCheckMessage.setVisibility(View.GONE);
+                        systemsCheckStatus.setVisibility(View.GONE);
+                        systemsCheckBacker.setVisibility(View.GONE);
+                    }
+                });
+            }
+        });
+    }
+
+}
+</pre>
+</body>
+</html>
