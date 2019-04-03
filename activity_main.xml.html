@@ -1,0 +1,665 @@
+<html>
+<head>
+<title>activity_main.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000; font-style: italic;}
+.s1 { color: #0000ff; font-weight: bold;}
+.s2 { color: #000000;}
+.s3 { color: #008000; font-weight: bold;}
+.s4 { color: #000080; font-weight: bold;}
+.s5 { color: #000000;}
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+activity_main.xml</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">&lt;?</span><span class="s1">xml version=</span><span class="s3">&quot;1.0&quot; </span><span class="s1">encoding=</span><span class="s3">&quot;utf-8&quot;</span><span class="s0">?&gt;</span>
+&lt;<span class="s4">android.support.constraint.ConstraintLayout </span><span class="s1">xmlns:android=</span><span class="s3">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="s1">xmlns:app=</span><span class="s3">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="s1">xmlns:tools=</span><span class="s3">&quot;http://schemas.android.com/tools&quot;</span>
+    <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+    <span class="s1">android:layout_height=</span><span class="s3">&quot;match_parent&quot;</span>
+    <span class="s1">tools:context=</span><span class="s3">&quot;.MainActivity&quot;</span>&gt;
+
+    &lt;<span class="s4">ImageView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/imageView&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;0dp&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;0dp&quot;</span>
+        <span class="s1">app:layout_constraintBottom_toBottomOf=</span><span class="s3">&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toEndOf=</span><span class="s3">&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintStart_toStartOf=</span><span class="s3">&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf=</span><span class="s3">&quot;parent&quot;</span>
+        <span class="s1">app:srcCompat=</span><span class="s3">&quot;@color/colorPrimary&quot; </span>/&gt;
+
+
+    &lt;<span class="s4">ScrollView</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;match_parent&quot;</span>&gt;
+
+        &lt;<span class="s4">LinearLayout</span>
+            <span class="s1">android:layout_width=</span><span class="s3">&quot;fill_parent&quot;</span>
+            <span class="s1">android:layout_height=</span><span class="s3">&quot;fill_parent&quot;</span>
+            <span class="s1">android:orientation=</span><span class="s3">&quot;vertical&quot;</span>
+            <span class="s1">android:padding=</span><span class="s3">&quot;10dp&quot;</span>&gt;
+
+            //Game Pad Boxes
+
+            &lt;<span class="s4">ImageView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;20dp&quot;</span>
+                <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot; </span>/&gt;
+
+            &lt;<span class="s4">TextView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;GamePad&quot;</span>
+                <span class="s1">android:textAlignment=</span><span class="s3">&quot;center&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;50sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">ImageView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;20dp&quot;</span>
+                <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/LeftThumbBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Left Thumbstick U/D (Left drive F/B)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/RightThumbBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Right Thumbstick U/D      (Right drive F/B)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/ThumbsLRBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Thumbsticks left and right (Nothing)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/LeftTriggerBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Left Trigger (Hatch position In/Out)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/RightTriggerBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Right Trigger (Nothing)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/ButtonABox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:baselineAligned=</span><span class="s3">&quot;false&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button A (Wrist Position 1)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/ButtonBBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button B (Wrist Position 2)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/ButtonXBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button X (Nothing)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/ButtonYBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button Y (Wrist Position 3)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/LeftBumpBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Left Bumper (Outtake)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/RightBumpBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Right Bumper (Intake)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/BackStartButtonBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Back and Start Button (Nothing&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/ThumbsPressBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Left and right Stick Press (Nothing)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            //Joystick Boxes
+
+            &lt;<span class="s4">ImageView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;20dp&quot;</span>
+                <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot; </span>/&gt;
+
+            &lt;<span class="s4">TextView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Joystick&quot;</span>
+                <span class="s1">android:textAlignment=</span><span class="s3">&quot;center&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;50sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">ImageView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;20dp&quot;</span>
+                <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/JoystickUDLRBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Joystick UP/Down Left/Right (Nothing)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/ThrottleBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Throttle (Nothing)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/TriggerBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Trigger (Lift Up)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Button2Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button 2 (Lift Down)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Button3Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button 3 (Cargo Ship ball position 1)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Button4Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button 4 (Wrist Down)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Button5Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button 5 (Hatch position In/Out)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Button6Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button 6 (Wrist Up)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Button7Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button 7 (Rocket ball Position 3)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Button8Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button 8 (Rocket hatch Position 3)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Button9Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button 9 (Rocket ball Position 2)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Button10Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button 10 (Rocket hatch Position 2)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Button11Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button 11 (Rocket ball Position 1)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Button12Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Button 12 (Rocket hatch Position 1/ Cargo ship Postion 1/ Loading Station)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            //Auto Behaviors Booxes
+
+            &lt;<span class="s4">ImageView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;20dp&quot;</span>
+                <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot; </span>/&gt;
+
+            &lt;<span class="s4">TextView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Auto Behaviors&quot;</span>
+                <span class="s1">android:textAlignment=</span><span class="s3">&quot;center&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;50sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">ImageView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;20dp&quot;</span>
+                <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Auto1Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;120dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;When match starts, zero the lift controller with timed limit switch&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Auto2Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;120dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;After Lift Encoder is zeroed, Lift up to 3 feet 3.75 inches&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/Auto3Box&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;170dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Start Vision to line up robot on its target and Stop Vision using a button&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            //Systems Check Boxes
+
+            &lt;<span class="s4">ImageView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;20dp&quot;</span>
+                <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot; </span>/&gt;
+
+            &lt;<span class="s4">TextView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Systems Check&quot;</span>
+                <span class="s1">android:textAlignment=</span><span class="s3">&quot;center&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;50sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">ImageView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;20dp&quot;</span>
+                <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/CamboardBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;100dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Camera on shufful board&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">TextView</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;CAN chain:&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;40sp&quot;</span>
+                /&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/CAN_DriveLeftBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Drive Left (0 and 1)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/CAN_DriveRightBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Drive Right (2 and 3)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/CAN_LiftBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:layout_marginLeft=</span><span class="s3">&quot;30dp&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Lift (4)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/WristUPBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Wrist moving Up (Encoder in positive direction)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+                <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;30dp&quot;</span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/WristDOWNBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Wrist moving Down (Encoder in negative direction)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+                <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/WristUpperLimBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Wrist upper limit (DIO 6 true)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+                <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/WristLowerLimBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Wrist lower limit (DIO 7 true)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+                <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>/&gt;
+
+            &lt;<span class="s4">CheckBox</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/LiftLowerLimBox&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Lift lower limit (DIO 4 true)&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+                <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>/&gt;
+
+
+
+            &lt;<span class="s4">Button</span>
+                <span class="s1">android:id=</span><span class="s3">&quot;@+id/FinishBTN&quot;</span>
+                <span class="s1">android:layout_width=</span><span class="s3">&quot;200dp&quot;</span>
+                <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+                <span class="s1">android:layout_gravity=</span><span class="s3">&quot;center&quot;</span>
+                <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;20dp&quot;</span>
+                <span class="s1">android:background=</span><span class="s3">&quot;@color/colorPrimaryDark&quot;</span>
+                <span class="s1">android:text=</span><span class="s3">&quot;Finish&quot;</span>
+                <span class="s1">android:textAlignment=</span><span class="s3">&quot;center&quot;</span>
+                <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+                <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot; </span>/&gt;
+
+
+
+
+
+
+        &lt;/<span class="s4">LinearLayout</span>&gt;
+
+
+    &lt;/<span class="s4">ScrollView</span>&gt;
+
+    //Final Box Messages
+
+    &lt;<span class="s4">ImageView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/finishBackgroundBox&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>/&gt;
+
+
+    &lt;<span class="s4">ImageView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/finishForgroundBox&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_margin=</span><span class="s3">&quot;40dp&quot;</span>
+        <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimary&quot;</span>
+        <span class="s1">tools:layout_editor_absoluteX=</span><span class="s3">&quot;40dp&quot;</span>
+        <span class="s1">tools:layout_editor_absoluteY=</span><span class="s3">&quot;40dp&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>/&gt;
+
+
+    &lt;<span class="s4">TextView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/gamePadMessage&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginHorizontal=</span><span class="s3">&quot;70dp&quot;</span>
+        <span class="s1">android:layout_marginBottom=</span><span class="s3">&quot;500dp&quot;</span>
+        <span class="s1">android:gravity=</span><span class="s3">&quot;center&quot;</span>
+        <span class="s1">android:text=</span><span class="s3">&quot;@string/finish_message_gamepad&quot;</span>
+        <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+        <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        <span class="s1">app:layout_constraintLeft_toLeftOf=</span><span class="s3">&quot;@id/finishForgroundBox&quot;</span>
+        <span class="s1">app:layout_constraintRight_toRightOf=</span><span class="s3">&quot;@id/finishForgroundBox&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf=</span><span class="s3">&quot;@id/finishForgroundBox&quot;</span>
+        /&gt;
+
+    &lt;<span class="s4">TextView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/joystickMessage&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginHorizontal=</span><span class="s3">&quot;70dp&quot;</span>
+        <span class="s1">android:layout_marginBottom=</span><span class="s3">&quot;300dp&quot;</span>
+        <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;10dp&quot;</span>
+        <span class="s1">android:gravity=</span><span class="s3">&quot;center&quot;</span>
+        <span class="s1">android:text=</span><span class="s3">&quot;@string/finish_message_joystick&quot;</span>
+        <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+        <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf=</span><span class="s3">&quot;@+id/gamePadStatusBacker&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot; </span>/&gt;
+
+    &lt;<span class="s4">ImageView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/gamePadStatusBacker&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;150dp&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;50dp&quot;</span>
+        <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        <span class="s1">app:layout_constraintRight_toRightOf=</span><span class="s3">&quot;@id/finishForgroundBox&quot;</span>
+        <span class="s1">app:layout_constraintLeft_toLeftOf=</span><span class="s3">&quot;@id/finishForgroundBox&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf=</span><span class="s3">&quot;@id/gamePadStatus&quot;</span>/&gt;
+
+    &lt;<span class="s4">TextView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/gamePadStatus&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;10dp&quot;</span>
+        <span class="s1">android:text=</span><span class="s3">&quot;@string/error&quot;</span>
+        <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+        <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorGreen&quot;</span>
+        <span class="s1">android:gravity=</span><span class="s3">&quot;center&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf=</span><span class="s3">&quot;@id/gamePadMessage&quot; </span>/&gt;
+
+    &lt;<span class="s4">ImageView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/joystickStatusBacker&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;150dp&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;50dp&quot;</span>
+        <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        <span class="s1">app:layout_constraintRight_toRightOf=</span><span class="s3">&quot;@id/finishForgroundBox&quot;</span>
+        <span class="s1">app:layout_constraintLeft_toLeftOf=</span><span class="s3">&quot;@id/finishForgroundBox&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf=</span><span class="s3">&quot;@id/joystickStatus&quot;</span>/&gt;
+
+    &lt;<span class="s4">TextView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/joystickStatus&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;10dp&quot;</span>
+        <span class="s1">android:text=</span><span class="s3">&quot;@string/error&quot;</span>
+        <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+        <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorGreen&quot;</span>
+        <span class="s1">android:gravity=</span><span class="s3">&quot;center&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf=</span><span class="s3">&quot;@id/joystickMessage&quot; </span>/&gt;
+
+    &lt;<span class="s4">TextView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/AutoBehaviorsMessage&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginHorizontal=</span><span class="s3">&quot;70dp&quot;</span>
+        <span class="s1">android:gravity=</span><span class="s3">&quot;center&quot;</span>
+        <span class="s1">android:text=</span><span class="s3">&quot;@string/finish_message_autoBehaviors&quot;</span>
+        <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+        <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+        <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;10dp&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf=</span><span class="s3">&quot;@+id/joystickStatusBacker&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot; </span>/&gt;
+
+    &lt;<span class="s4">ImageView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/AutoBehaviorsStatusBacker&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;150dp&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;50dp&quot;</span>
+        <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        <span class="s1">app:layout_constraintRight_toRightOf=</span><span class="s3">&quot;@id/finishForgroundBox&quot;</span>
+        <span class="s1">app:layout_constraintLeft_toLeftOf=</span><span class="s3">&quot;@id/finishForgroundBox&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf=</span><span class="s3">&quot;@id/AutoBehaviorStatus&quot;</span>/&gt;
+
+    &lt;<span class="s4">TextView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/AutoBehaviorStatus&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;10dp&quot;</span>
+        <span class="s1">android:text=</span><span class="s3">&quot;@string/error&quot;</span>
+        <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+        <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorGreen&quot;</span>
+        <span class="s1">android:gravity=</span><span class="s3">&quot;center&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf=</span><span class="s3">&quot;@id/AutoBehaviorsMessage&quot; </span>/&gt;
+
+    &lt;<span class="s4">TextView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/SystemsCheckMessage&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginHorizontal=</span><span class="s3">&quot;70dp&quot;</span>
+        <span class="s1">android:gravity=</span><span class="s3">&quot;center&quot;</span>
+        <span class="s1">android:text=</span><span class="s3">&quot;@string/finish_message_systemsCheck&quot;</span>
+        <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+        <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+        <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;10dp&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf=</span><span class="s3">&quot;@+id/AutoBehaviorsStatusBacker&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot; </span>/&gt;
+
+    &lt;<span class="s4">ImageView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/SystemsCheckStatusBacker&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;150dp&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;50dp&quot;</span>
+        <span class="s1">android:src=</span><span class="s3">&quot;@color/colorPrimaryDark&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        <span class="s1">app:layout_constraintRight_toRightOf=</span><span class="s3">&quot;@id/finishForgroundBox&quot;</span>
+        <span class="s1">app:layout_constraintLeft_toLeftOf=</span><span class="s3">&quot;@id/finishForgroundBox&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf=</span><span class="s3">&quot;@id/SystemsCheckStatus&quot;</span>/&gt;
+
+    &lt;<span class="s4">TextView</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/SystemsCheckStatus&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginTop=</span><span class="s3">&quot;10dp&quot;</span>
+        <span class="s1">android:text=</span><span class="s3">&quot;@string/error&quot;</span>
+        <span class="s1">android:textSize=</span><span class="s3">&quot;30sp&quot;</span>
+        <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorGreen&quot;</span>
+        <span class="s1">android:gravity=</span><span class="s3">&quot;center&quot;</span>
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf=</span><span class="s3">&quot;@id/SystemsCheckMessage&quot; </span>/&gt;
+
+    &lt;<span class="s4">Button</span>
+        <span class="s1">android:id=</span><span class="s3">&quot;@+id/doneBTN&quot;</span>
+        <span class="s1">android:layout_width=</span><span class="s3">&quot;100dp&quot;</span>
+        <span class="s1">android:layout_height=</span><span class="s3">&quot;50dp&quot;</span>
+        <span class="s1">android:text=</span><span class="s3">&quot;Back&quot;</span>
+        <span class="s1">android:textSize=</span><span class="s3">&quot;20sp&quot;</span>
+        <span class="s1">android:textColor=</span><span class="s3">&quot;@color/colorAccent&quot;</span>
+        <span class="s1">android:background=</span><span class="s3">&quot;@color/colorPrimaryDark&quot;</span>
+
+        <span class="s1">android:visibility=</span><span class="s3">&quot;gone&quot;</span>
+        <span class="s1">app:layout_constraintBottom_toBottomOf=</span><span class="s3">&quot;@id/finishBackgroundBox&quot;</span>
+        <span class="s1">app:layout_constraintLeft_toLeftOf=</span><span class="s3">&quot;@id/finishBackgroundBox&quot;</span>
+
+        /&gt;
+
+&lt;/<span class="s4">android.support.constraint.ConstraintLayout</span>&gt;</pre>
+</body>
+</html>
